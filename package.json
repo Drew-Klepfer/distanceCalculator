@@ -9,6 +9,7 @@
   "author": "Drew Klepfer",
   "license": "ISC",
   "dependencies": {
+    "coordinate-parser": "^1.0.7",
     "express": "^4.18.2",
     "haversine-distance": "^1.2.1"
   }
