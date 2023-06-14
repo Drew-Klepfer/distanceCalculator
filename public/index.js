@@ -59,6 +59,7 @@ function init() {
     };
 
     const isValidCoordinate = coord => {
+        /* use regex to get valid points */
         return false;
     }
 
