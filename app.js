@@ -6,11 +6,16 @@ const Coordinates = require('coordinate-parser');
     console.log(haversine(a, b)) // 714504.18 (in meters) */
 const port = process.env.PORT || 5000;
 const app = express();
+const path = require('path')
 
 /* initialize express middleware to parse JSON data to get form data */
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
+
+/* set view engine */
+app.set("view engine", "pug");
+app.set('views', path.join( __dirname, 'views'));
 
 app.listen(port,()=>{
     console.log(`Server started at http://localhost:${port}`)
@@ -35,9 +40,13 @@ app.post("/", (req, res) => {
 
     //console.log("Point A:" , position1, " Point B:", position2);
 
-    res.send("data recieved");
+    //res.send("data recieved");
 
     var kilometers = findDistance(position1, position2);
+
+    res.render('index', {
+        kilo: kilometers
+    });
 
     //res.send(kilometers);
 });
