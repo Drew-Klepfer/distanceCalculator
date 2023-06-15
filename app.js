@@ -11,7 +11,7 @@ const path = require('path')
 /* initialize express middleware to parse JSON data to get form data */
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 /* set view engine */
 app.set("view engine", "pug");
