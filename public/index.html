@@ -23,15 +23,15 @@
 
 
     <br><br>
-    <form class="center text-align" action="/" method="post" id="form">
-        <div class="mb-3 container">
+    <form class="center" action="/" method="post" id="form">
+        <div class="mb-3 container input-control">
             <label for="pointA" class="form-label">Point A</label>
-            <input required type="text" name="pointA" class="form-control input-sm" id="pointA">
-            <div class="error"></div>
+            <input required type="text" name="pointA" class="form-control input-sm" id="pointA" placeholder="latitude, longitude">
+            <div class="error" ></div>
         </div>
-        <div class="mb-3 container">
+        <div class="mb-3 container input-control">
             <label for="pointB" class="form-label">Point B</label>
-            <input required type="text" name="pointB" class="form-control " id="pointB">
+            <input required type="text" name="pointB" class="form-control" id="pointB" placeholder="latitude, longitude ">
             <div class="error"></div>
         </div>
         <button type="submit" id="submit" class="btn btn-primary">Calculate</button>

@@ -1,12 +1,53 @@
+/* common styles */
 .center {
     margin: 0 auto;
     text-align: center;
 }
-
 .text-align {
     text-align: center;
 }
 
+/* form */
 form {
     width: 40%;
 }
+.input-control.success input {
+    border-color: green;
+}
+.input-control.error input {
+    border-color: red;
+}
+.input-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}
+.input-control .error {
+    color: #ff3860;
+    font-size: 15px;
+    height: 13px;
+}
+
+/* colors */
+:root {
+    --background: #fffffe;
+    --headline:#094067 ;
+    --paragraph: #5f6c7b;
+    --button: #3da9fc;
+}
+
+body {
+    background-color: var(--background);
+}
+
+h1, h4 {
+    color: var(--headline);
+}
+
+button {
+    background-color: var(--button);
+}
+
