@@ -4,7 +4,7 @@ const Coordinates = require('coordinate-parser');
 /*  const a = { latitude: 37.8136, longitude: 144.9631 }
     const b = { latitude: 33.8650, longitude: 151.2094 }        
     console.log(haversine(a, b)) // 714504.18 (in meters) */
-const port = process.env.PORT || 5000;
+const port = process.env.PORT;
 const app = express();
 const path = require('path')
 
