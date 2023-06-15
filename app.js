@@ -36,7 +36,10 @@ app.post("/", (req, res) => {
     //console.log("Point A:" , position1, " Point B:", position2);
 
     res.send("data recieved");
-    findDistance(position1, position2);
+
+    var kilometers = findDistance(position1, position2);
+
+    //res.send(kilometers);
 });
 
 function findDistance(a, b) {
@@ -47,5 +50,9 @@ function findDistance(a, b) {
     var haversine_m = haversine(A, B); // meters
     var haversine_km = haversine_m / 1000;
 
+    
+
     console.log("DISTANCE", haversine_km, "km");
+
+    return haversine_km;
 }
