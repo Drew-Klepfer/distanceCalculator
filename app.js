@@ -38,10 +38,6 @@ app.post("/", (req, res) => {
     position1 = new Coordinates(pointA);
     position2 = new Coordinates(pointB);
 
-    //console.log("Point A:" , position1, " Point B:", position2);
-
-    //res.send("data recieved");
-
     var kilometers = findDistance(position1, position2);
 
     res.render('index', {
@@ -51,17 +47,13 @@ app.post("/", (req, res) => {
     //res.send(kilometers);
 });
 
+/* calculate distance between two coordinates */
 function findDistance(a, b) {
     const A = [a.latitude, a.longitude];
     const B = [b.latitude, b.longitude];
-    //console.log(A);
-    //console.log(B);
+
     var haversine_m = haversine(A, B); // meters
     var haversine_km = haversine_m / 1000;
-
-    
-
-    console.log("DISTANCE", haversine_km, "km");
 
     return haversine_km;
 }
