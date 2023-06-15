@@ -23,23 +23,20 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
     const pointA = req.body.pointA;
     const pointB = req.body.pointB;
-    /* parse input to decimal values only */
-    var regex = new RegExp("^(?<lat>(-?(90|(\d|[1-8]\d)(\.\d{1,6}){0,1})))\,{1}\s?(?<long>(-?(180|(\d|\d\d|1[0-7]\d)(\.\d{1,6}){0,1})))");
-
+    
     /* if(regex.test(pointA)) {
         console.log("Success!");
     } else {
         console.log("Please enter valid coordinate points, separated by a comma.")
     } */
 
-
     position1 = new Coordinates(pointA);
     position2 = new Coordinates(pointB);
 
-    //console.log("Point A:" , position1, " Point B:", position2);
+    console.log("Point A:" , position1, " Point B:", position2);
 
     res.send("data recieved");
-    findDistance(position1, position2);
+    //findDistance(position1, position2);
 });
 
 function findDistance(a, b) {
